@@ -61,7 +61,7 @@ const Widgets = React.lazy(() => import("./views/widgets/Widgets"));
 const Users = React.lazy(() => import("./views/users/Users"));
 const User = React.lazy(() => import("./views/users/User"));
 
-const routes = [
+const routesexam = [
   { path: "/", exact: true, name: "Home" },
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
   { path: "/theme", name: "Theme", component: Colors, exact: true },
@@ -121,4 +121,4 @@ const routes = [
   { path: "/users/:id", exact: true, name: "User Details", component: User },
 ];
 
-export default routes;
+export default routesexam;
