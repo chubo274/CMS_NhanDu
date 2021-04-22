@@ -12,7 +12,7 @@ import {
   CButton,
 } from "@coreui/react";
 
-import usersData from "./UsersData";
+import toursData from "./UsersData";
 
 const getBadge = (status) => {
   switch (status) {
@@ -29,7 +29,7 @@ const getBadge = (status) => {
   }
 };
 
-const Users = () => {
+const Tours = () => {
   const history = useHistory();
   const queryPage = useLocation().search.match(/page=([0-9]+)/, "");
   const currentPage = Number(queryPage && queryPage[1] ? queryPage[1] : 1);
@@ -65,7 +65,7 @@ const Users = () => {
           </CCardHeader>
           <CCardBody>
             <CDataTable
-              items={usersData}
+              items={toursData}
               fields={[
                 { key: "name", _classes: "font-weight-bold" },
                 "registered",
@@ -100,4 +100,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default Tours;

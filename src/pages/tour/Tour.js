@@ -2,13 +2,13 @@ import React from "react";
 import { CCard, CCardBody, CCardHeader, CCol, CRow } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
-import usersData from "./UsersData";
+import toursData from "./UsersData";
 import { Formik } from "formik";
 
-const User = ({ match }) => {
-  const user = usersData.find((user) => user.id.toString() === match.params.id);
-  const userDetails = user
-    ? Object.entries(user)
+const Tour = ({ match }) => {
+  const tour = toursData.find((tour) => tour.id.toString() === match.params.id);
+  const userDetails = tour
+    ? Object.entries(tour)
     : [
         [
           "id",
@@ -22,7 +22,7 @@ const User = ({ match }) => {
     <CRow>
       <CCol lg={6}>
         <CCard>
-          <CCardHeader>User id: {match.params.id}</CCardHeader>
+          <CCardHeader>Tour id: {match.params.id}</CCardHeader>
           <CCardBody>
             <Formik>
               <table className="table table-striped table-hover">
@@ -47,4 +47,4 @@ const User = ({ match }) => {
   );
 };
 
-export default User;
+export default Tour;
